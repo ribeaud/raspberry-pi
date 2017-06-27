@@ -18,6 +18,8 @@ urlcolor=blue]{hyperref}
 % Use smaller margins
 \usepackage[cm]{fullpage}
 \usepackage{layout}
+\usepackage{float}
+\usepackage{wrapfig}
 
 % 'graphicx' configuration
 \graphicspath{ {img/} }
@@ -56,7 +58,7 @@ Bevor man mit dem \rp richtig loslegen kann, muss man zumindest grob wissen, wo 
 
 Auf dem unteren Foto des \rp zeichne die folgenden Anschlüsse und Komponenten ein. Antwort befindet sich im \cref{apx:comp} (\cref{fig:rp_ls}).
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=1.3]{raspberry}
 \caption{Raspberry Pi 3}
@@ -78,6 +80,14 @@ Auf dem unteren Foto des \rp zeichne die folgenden Anschlüsse und Komponenten e
 
 \subsection{SD Karte}
 
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \vspace{-25pt}
+  \begin{center}
+    \includegraphics[scale=0.2]{sd_card}
+  \end{center}
+  \vspace{-25pt}
+\end{wrapfigure}
+
 Die \textbf{SD Karte} ist essenziell, denn das \rp kann nicht von einem USB Stick oder Festplatte gestartet werden. Der Geschwindigkeit halber wird eine Class 10 SD mit mindestens 8 GB Kapazität empfohlen. Prinzipiell sind aber bis zu 32 GB möglich. Die minimal benötigte Größe variiert von Betriebssystem zu Betriebssystem zwischen 2 und 6 GB. Falls du eine alte (micro)SD Karte aus der Kamera oder dem Handy hast, kannst du diese benutzen.
 
 \subsection{Stromversorgung}
@@ -87,6 +97,34 @@ Damit der \textbf{Pi} genug Strom bekommt, braucht man ein microUSB Kabel mit Ne
 \subsection{HDMI Kabel}
 
 Je nachdem für welche Anwendung ist ein HDMI Kabel optimal. Will man den Pi als reinen Server per SSH steuern, ist ein HDMI Kabel nicht nötig. Für andere Bereiche, wie z.B. als Multimedia Center sollte auf jeden Fall ein HDMI Kabel vorhanden sein.
+
+\subsection{Gehäuse}
+
+Da der \textbf{Pi} ohne Zubehör, also auch ohne äußere Verkleidung geliefert wird, kann man ein Gehäuse nachkaufen. Es gibt sie in verschiedenen Formen und Farben (ab 3 aufwärts). Unbedingt notwendig ist es aber nicht, daher sollte jeder für sich selbst entscheiden, ob er eines benötigt oder nicht.
+
+Was allerdings sehr empfehlswert ist, vor allem wenn der \textbf{Pi} dauerhaft oder längere Zeit laufen soll, sind Kühlkörper. Ein Set besteht aus 3 Kühlkörpern, für die verschiedenen Chips des Pi's. Zwar sind die Chips des Raspberry’s so gemacht, dass sie nicht überhitzen (wie bspw. der Prozessor im Handy), aber dennoch kann die CPU bis zu 45 heiß werden, was nicht besonders zur Langlebigkeit beiträgt. Wer beides will, kann auch einfach auf ein Gehäuse mit Kühlkörpern dabei zurückgreifen.
+
+\section{Hardware}
+
+\subsection{Prozessor}
+
+Wie Anfangs schon erwähnt ist das Herz des Raspberry Pi ein Broadcom 700 MhZ ARM11 Prozessor.  Ein genauerer Blick auf den Prozessor zeigt das er mit einem 64 Bit Bus auf dem Raspberry Pi auf dem ARMv6-Instruktionssatz eingebunden ist.
+Diverse Hacks erlauben es den auf normal 700 MhZ getakteten Prozessor auf bis zu 1Ghz anzuheben. (Davon wird laut Hersteller jedoch abgeraten, da durch höhrere Temperaturen die Lebensdauer stark beschränkt wird.)
+
+\subsection{Grafik}
+
+Der Raspberry Pi kommt ohne eigenen GrafikChip aus. Anstatt dessen wird der ARM11- Prozessor mit Broadcoms “Video-Core”- Grafikprozessor kombiniert. Im März 2014 legte Broadcom sämtliche Treibercodes und Dokumentationen offen, so das auch ein freier Grafiktreiber erstellt werden kann.
+
+\subsection{GPIO}
+
+GPIO steht für General Purpose Input/ Output. Über diese Schnittstelle können diverse Geräte angesteuert werden (LEDs, Sensoren, Displays, etc). Es gibt 6 GPIO Anschlüsse auf dem Raspberry Pi.
+
+\subsection{CSI}
+
+Das CSI erlaubt die direkte Anbindung einer Kamera. Das Camera Serial Interface kann eine Kamera mit 5MP ansteuern. Fotos oder Videos sind in diversen Auflösungen möglich. Seit Oktober 2013 ist auch eine Variante mit Infrarotfilter verfügbar.
+
+% Wie sieht aus, sobald wir uns eingeloggt haben?
+% Ich brauche mehr Bilder
 
 \clearpage
 \appendix
