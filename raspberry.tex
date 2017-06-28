@@ -20,6 +20,8 @@ urlcolor=blue]{hyperref}
 \usepackage{layout}
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage{eurosym}
 
 % 'graphicx' configuration
 \graphicspath{ {img/} }
@@ -38,7 +40,7 @@ urlcolor=blue]{hyperref}
 \begin{document}
 % '\layout' to visualize the layout applied
 \title{Raspberry Pi}
-\author{Christian Ribeaud}
+\author{Hr. Walter, Hr. Ehret und Hr. Ribeaud}
 \maketitle
 
 Die \rp Hardware ist ein Einplatinen Computer der von der britischen \href{https://www.raspberrypi.org/}{Raspberry Pi Foundation} gefertigt wird.
@@ -88,43 +90,67 @@ Auf dem unteren Foto des \rp zeichne die folgenden Anschlüsse und Komponenten e
   \vspace{-25pt}
 \end{wrapfigure}
 
-Die \textbf{SD Karte} ist essenziell, denn das \rp kann nicht von einem USB Stick oder Festplatte gestartet werden. Der Geschwindigkeit halber wird eine Class 10 SD mit mindestens 8 GB Kapazität empfohlen. Prinzipiell sind aber bis zu 32 GB möglich. Die minimal benötigte Größe variiert von Betriebssystem zu Betriebssystem zwischen 2 und 6 GB. Falls du eine alte (micro)SD Karte aus der Kamera oder dem Handy hast, kannst du diese benutzen.
+Die \textbf{SD Karte} ist essenziell, denn das \rp kann nicht von einem USB Stick oder Festplatte gestartet werden. Der Geschwindigkeit halber wird eine \textit{Class 10 SD} mit mindestens \textit{8 GB} Kapazität empfohlen. Prinzipiell sind aber bis zu 32 GB möglich. Die minimal benötigte Größe variiert von Betriebssystem zu Betriebssystem zwischen 2 und 6 GB. Falls man eine alte (micro)SD Karte aus der Kamera oder dem Handy hat, kann man diese benutzen.
 
 \subsection{Stromversorgung}
 
-Damit der \textbf{Pi} genug Strom bekommt, braucht man ein microUSB Kabel mit Netzteil (gibt es auch in einem). Wenn man bereits ein microUSB Kabel hast, braucht man nur noch ein USB Netzteil, welches für den Dauerbetrieb geeignet ist und mindestens 1000mA liefert (auch diese sind separat erhältlich). Das Raspberry Pi 2/3 sollte mit einem Netzteil, welches 2000mA liefert an den Strom angeschlossen werden.
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \vspace{-12pt}
+  \begin{center}
+    \includegraphics[scale=0.2]{microusb}
+  \end{center}
+  \vspace{-25pt}
+\end{wrapfigure}
+
+Damit der \textbf{Pi} genug Strom bekommt, braucht man ein \textbf{microUSB Kabel} mit Netzteil (gibt es auch in einem). Wenn man bereits ein \textbf{microUSB Kabel} hast, braucht man nur noch ein USB Netzteil, welches für den Dauerbetrieb geeignet ist und mindestens \textit{1000mA} liefert (auch diese sind separat erhältlich). Das Raspberry Pi 2/3 sollte mit einem Netzteil, welches \textit{2000mA} liefert an den Strom angeschlossen werden.
 
 \subsection{HDMI Kabel}
 
-Je nachdem für welche Anwendung ist ein HDMI Kabel optimal. Will man den Pi als reinen Server per SSH steuern, ist ein HDMI Kabel nicht nötig. Für andere Bereiche, wie z.B. als Multimedia Center sollte auf jeden Fall ein HDMI Kabel vorhanden sein.
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \vspace{-30pt}
+  \begin{center}
+    \includegraphics[width=3cm]{hdmi}
+  \end{center}
+  \vspace{-25pt}
+\end{wrapfigure}
+
+Das \textbf{HDMI Kabel} dient dazu, einen Bildschirm anzuschliessen. Wenn der Bildschirm über keinen HDMI Anschluss verfügt (\textbf{DVI} od. \textbf{VGA}), dann muss man sich einen Adapter besorgen.
+
+\subsection{Maus und Tastatur}
+
+\textbf{Maus} und \textbf{Tastatur} werden via USB angeschlossen.
 
 \subsection{Gehäuse}
 
-Da der \textbf{Pi} ohne Zubehör, also auch ohne äußere Verkleidung geliefert wird, kann man ein Gehäuse nachkaufen. Es gibt sie in verschiedenen Formen und Farben (ab 3 aufwärts). Unbedingt notwendig ist es aber nicht, daher sollte jeder für sich selbst entscheiden, ob er eines benötigt oder nicht.
+Da der \textbf{Pi} ohne Zubehör, also auch ohne äußere Verkleidung geliefert wird, kann man ein Gehäuse nachkaufen. Es gibt sie in verschiedenen Formen und Farben (ab 3€ aufwärts). Unbedingt notwendig ist es aber nicht, daher sollte jeder für sich selbst entscheiden, ob er eines benötigt oder nicht.
 
-Was allerdings sehr empfehlswert ist, vor allem wenn der \textbf{Pi} dauerhaft oder längere Zeit laufen soll, sind Kühlkörper. Ein Set besteht aus 3 Kühlkörpern, für die verschiedenen Chips des Pi's. Zwar sind die Chips des Raspberry’s so gemacht, dass sie nicht überhitzen (wie bspw. der Prozessor im Handy), aber dennoch kann die CPU bis zu 45 heiß werden, was nicht besonders zur Langlebigkeit beiträgt. Wer beides will, kann auch einfach auf ein Gehäuse mit Kühlkörpern dabei zurückgreifen.
+Was allerdings sehr empfehlswert ist, vor allem wenn der \textbf{Pi} dauerhaft oder längere Zeit laufen soll, sind Kühlkörper. Ein Set besteht aus 3 Kühlkörpern, für die verschiedenen Chips des \textbf{Pi}'s. Zwar sind die Chips des Raspberry’s so gemacht, dass sie nicht überhitzen (wie bspw. der Prozessor im Handy), aber dennoch kann die CPU bis zu 45° heiß werden, was nicht besonders zur Langlebigkeit beiträgt. Wer beides will, kann auch einfach auf ein Gehäuse mit Kühlkörpern dabei zurückgreifen.
 
 \section{Hardware}
 
-\subsection{Prozessor}
-
-Wie Anfangs schon erwähnt ist das Herz des Raspberry Pi ein Broadcom 700 MhZ ARM11 Prozessor.  Ein genauerer Blick auf den Prozessor zeigt das er mit einem 64 Bit Bus auf dem Raspberry Pi auf dem ARMv6-Instruktionssatz eingebunden ist.
-Diverse Hacks erlauben es den auf normal 700 MhZ getakteten Prozessor auf bis zu 1Ghz anzuheben. (Davon wird laut Hersteller jedoch abgeraten, da durch höhrere Temperaturen die Lebensdauer stark beschränkt wird.)
-
-\subsection{Grafik}
-
-Der Raspberry Pi kommt ohne eigenen GrafikChip aus. Anstatt dessen wird der ARM11- Prozessor mit Broadcoms “Video-Core”- Grafikprozessor kombiniert. Im März 2014 legte Broadcom sämtliche Treibercodes und Dokumentationen offen, so das auch ein freier Grafiktreiber erstellt werden kann.
-
 \subsection{GPIO}
 
-GPIO steht für General Purpose Input/ Output. Über diese Schnittstelle können diverse Geräte angesteuert werden (LEDs, Sensoren, Displays, etc). Es gibt 6 GPIO Anschlüsse auf dem Raspberry Pi.
+\textbf{GPIO} steht für \textit{General Purpose Input/Output}. Über diese Schnittstelle können diverse Geräte angesteuert werden (LEDs, Sensoren, Displays, etc).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{gpio}
+\caption{General Purpose Input/Output}
+\label{fig:gpio}
+\end{figure}
 
 \subsection{CSI}
 
-Das CSI erlaubt die direkte Anbindung einer Kamera. Das Camera Serial Interface kann eine Kamera mit 5MP ansteuern. Fotos oder Videos sind in diversen Auflösungen möglich. Seit Oktober 2013 ist auch eine Variante mit Infrarotfilter verfügbar.
+Das \textbf{CSI} erlaubt die direkte Anbindung einer Kamera. Das \textit{Camera Serial Interface} kann eine Kamera mit 5MP ansteuern. Fotos oder Videos sind in diversen Auflösungen möglich.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.8]{csi}
+\caption{Camera Serial Interface}
+\label{fig:gpio}
+\end{figure}
 
 % Wie sieht aus, sobald wir uns eingeloggt haben?
-% Ich brauche mehr Bilder
 
 \clearpage
 \appendix
