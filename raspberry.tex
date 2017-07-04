@@ -45,13 +45,13 @@ urlcolor=blue]{hyperref}
 
 Die \rp Hardware ist ein Einplatinen Computer der von der britischen \href{https://www.raspberrypi.org/}{Raspberry Pi Foundation} gefertigt wird.
 
-Der \rp wurde 2008 ursprünglich entwickelt, Kinder spielerisch in die Welt der Programmierung \& Elektronik einzuführen. Jedoch führte die einfache Handhabung und die fast unendlichen Möglichkeiten zu einer grossen Community, die mittlerweile durch alle Schichten und Altersklassen geht.
+Der \rp wurde 2008 ursprünglich entwickelt, Kinder spielerisch in die Welt der Programmierung \& Elektronik einzuführen. Jedoch führte die einfache Handhabung und die fast unendlichen Möglichkeiten zu einer großen Community, die mittlerweile durch alle Schichten und Altersklaßen geht.
 
-Der Name wird wie \textit{raspberry pie} ausgesprochen, das englische Wort für Himbeerkuchen. Die \textit{Himbeere} knüpft an die Tradition an, Computer nach Früchten zu benennen, wie etwa \textbf{Apple}. Das \textbf{Pi} stammt aus \textit{Python}, einer Programmiersprache.
+Der Name wird wie \textit{raspberry pie} ausgesprochen, das englische Wort für \textit{Himbeerkuchen}. Die \textit{Himbeere} knüpft an die Tradition an, Computer nach Früchten zu benennen, wie etwa \textbf{Apple}. Der \textbf{Pi} stammt aus \textit{Python}, einer Programmiersprache.
 
-Bis Februar 2017 wurden mehr als zwölf Millionen Geräte verkauft. Die Entwicklung des \textbf{Raspberry Pi} wurde mit mehreren Auszeichnungen bzw. Ehrungen bedacht. Es existiert ein großes Zubehör- und Softwareangebot für zahlreiche Anwendungsbereiche. Verbreitet ist beispielsweise die Verwendung als \href{https://www.youtube.com/watch?v=YPu7oSVbMVo}{Mediacenter}, da der Rechner Videodaten mit voller HD-Auflösung (1080p) dekodieren und über die HDMI-Schnittstelle ausgeben kann. 
+Bis Februar 2017 wurden mehr als zwölf Millionen Geräte verkauft. Die Entwicklung des \rp wurde mit mehreren Auszeichnungen bzw. Ehrungen bedacht. Es existiert ein großes Zubehör- und Softwareangebot für zahlreiche Anwendungsbereiche. Verbreitet ist beispielsweise die Verwendung als \href{https://www.youtube.com/watch?v=YPu7oSVbMVo}{Mediacenter}, da der Rechner Videodaten mit voller HD-Auflösung (1080p) dekodieren und über die HDMI-Schnittstelle ausgeben kann. 
 
-\section{Anschlüsse und Komponenten}
+\section{Anschlüße und Komponenten}
 \label{sec:comp}
 
 Bevor man mit dem \rp richtig loslegen kann, muss man zumindest grob wissen, wo welche Anschlüsse und Komponenten liegen und für was sie gut sind. Deshalb gilt es, alle wichtigen Anschlüsse und Bauteile des \rp richtig zu identifizieren.
@@ -92,6 +92,8 @@ Auf dem unteren Foto des \rp zeichne die folgenden Anschlüsse und Komponenten e
 
 Die \textbf{SD Karte} ist essenziell, denn das \rp kann nicht von einem USB Stick oder Festplatte gestartet werden. Der Geschwindigkeit halber wird eine \textit{Class 10 SD} mit mindestens \textit{8 GB} Kapazität empfohlen. Prinzipiell sind aber bis zu 32 GB möglich. Die minimal benötigte Größe variiert von Betriebssystem zu Betriebssystem zwischen 2 und 6 GB. Falls man eine alte (micro)SD Karte aus der Kamera oder dem Handy hat, kann man diese benutzen.
 
+Vorsicht! Niemals den \textbf{Pi} an dieser Stelle anfassen! Wenn man auf die Mikro-SD-Karte drückt, springt sie heraus. Dann verliert der \textbf{Pi} augenblicklich sein Gedächtnis. 
+
 \subsection{Stromversorgung}
 
 \begin{wrapfigure}{r}{0.2\textwidth}
@@ -102,7 +104,7 @@ Die \textbf{SD Karte} ist essenziell, denn das \rp kann nicht von einem USB Stic
   \vspace{-25pt}
 \end{wrapfigure}
 
-Damit der \textbf{Pi} genug Strom bekommt, braucht man ein \textbf{microUSB Kabel} mit Netzteil (gibt es auch in einem). Wenn man bereits ein \textbf{microUSB Kabel} hast, braucht man nur noch ein USB Netzteil, welches für den Dauerbetrieb geeignet ist und mindestens \textit{1000mA} liefert (auch diese sind separat erhältlich). Das Raspberry Pi 2/3 sollte mit einem Netzteil, welches \textit{2000mA} liefert an den Strom angeschlossen werden.
+Damit der \textbf{Pi} genug Strom bekommt, braucht man ein \textbf{Micro-USB Kabel} mit Netzteil (gibt es auch in einem). Wenn man bereits ein Micro-USB Kabel hat, braucht man nur noch ein USB Netzteil, welches für den Dauerbetrieb geeignet ist und mindestens \textit{1000mA} liefert (auch diese sind separat erhältlich). Der \rp 2/3 sollte mit einem Netzteil, welches \textit{2000mA} liefert an den Strom angeschlossen werden.
 
 \subsection{HDMI Kabel}
 
@@ -116,27 +118,31 @@ Damit der \textbf{Pi} genug Strom bekommt, braucht man ein \textbf{microUSB Kabe
 
 Das \textbf{HDMI Kabel} dient dazu, einen Bildschirm anzuschliessen. Wenn der Bildschirm über keinen HDMI Anschluss verfügt (\textbf{DVI} od. \textbf{VGA}), dann muss man sich einen Adapter besorgen.
 
+HDMI steht für \textit{High Definition Multimedia Interface}. Auf Deutsch bedeutet das in etwa Schnittstelle für hochauflösende Multimedia-Geräte. \textit{Hochauflösend} heisst, dass dein Monitor ein sehr gutes Bild mit 1920x1080 Bildpunkten zeigt. \textit{Multimedia} bedeutet, dass Bild und Ton übertragen werden.
+
 \subsection{Maus und Tastatur}
 
 \textbf{Maus} und \textbf{Tastatur} werden via USB angeschlossen. Der \textbf{Pi} bringt 4 USB 2.0 Anschlüsse mit sich.
 
 \subsection{Audio}
 
-Der Ton kann über zwei verschiedene Arten (HDMI und 3.5mm Klinkenstecker) ausgegeben werden. Welche man wählt, hängt stark von der Art des Einsatzes ab.
+Der Ton kann über zwei verschiedene Arten (\textbf{HDMI} und \textbf{3.5mm Klinkenstecker}) ausgegeben werden. Welche man wählt, hängt stark von der Art des Einsatzes ab.
 
 Standardmäßig wird der Ton bei einem über HDMI angestecktem Monitor ausgegeben. Das funktioniert aber nur dann, wenn der Monitor über HDMI auch bekanntgibt, dass er Lautsprecher besitzt. In vielen Fällen funktioniert das aber trotz Lautsprechern nicht. In diesem Fall fehlt der Ton, der wird dann über den analogen 3.5mm Klinkenstecker ausgegeben.
+
+An dem analogen Audio- und Video-Ausgang kann man Kopfhörer oder Aktivboxen anschließen. Aktivboxen sind Lautsprecher mit eingebautem Verstärker und eigener Stromversorgung.
 
 \subsection{Gehäuse}
 
 Da der \textbf{Pi} ohne Zubehör, also auch ohne äußere Verkleidung geliefert wird, kann man ein Gehäuse nachkaufen. Es gibt sie in verschiedenen Formen und Farben (ab 3€ aufwärts). Unbedingt notwendig ist es aber nicht, daher sollte jeder für sich selbst entscheiden, ob er eines benötigt oder nicht.
 
-Was allerdings sehr empfehlswert ist, vor allem wenn der \textbf{Pi} dauerhaft oder längere Zeit laufen soll, sind Kühlkörper. Ein Set besteht aus 3 Kühlkörpern, für die verschiedenen Chips des \textbf{Pi}'s. Zwar sind die Chips des Raspberry’s so gemacht, dass sie nicht überhitzen (wie bspw. der Prozessor im Handy), aber dennoch kann die CPU bis zu 45° heiß werden, was nicht besonders zur Langlebigkeit beiträgt. Wer beides will, kann auch einfach auf ein Gehäuse mit Kühlkörpern dabei zurückgreifen.
+Was allerdings sehr empfehlswert ist, vor allem wenn der \textbf{Pi} dauerhaft oder längere Zeit laufen soll, sind Kühlkörper. Ein Set besteht aus 3 Kühlkörpern, für die verschiedenen Chips des \textbf{Pi}. Zwar sind die Chips des \textbf{Raspberry} so gemacht, dass sie nicht überhitzen (wie bspw. der Prozessor im Handy), aber dennoch kann die CPU bis zu 45° heiß werden, was nicht besonders zur Langlebigkeit beiträgt. Wer beides will, kann auch einfach auf ein Gehäuse mit Kühlkörpern dabei zurückgreifen.
 
 \section{Hardware}
 
 \subsection{GPIO}
 
-\textbf{GPIO} steht für \textit{General Purpose Input/Output}. Über diese Schnittstelle können diverse Geräte angesteuert werden (LEDs, Sensoren, Displays, etc).
+\textbf{GPIO} steht für \textit{General Purpose Input/Output}, heisst auf Deutsch ungefähr \textit{Ein-/Ausgabegerät für viele Verwendungszwecke}. Über diese Schnittstelle können diverse Geräte angesteuert werden (LEDs, Sensoren, Displays, etc).
 
 \begin{figure}[H]
 \centering
@@ -156,12 +162,25 @@ Das \textbf{CSI} erlaubt die direkte Anbindung einer Kamera. Das \textit{Camera 
 \label{fig:gpio}
 \end{figure}
 
-% Wie sieht aus, sobald wir uns eingeloggt haben?
-% Explain other hardwares: Reset-Pins, Antenne, Activity LEDs, ...
+\subsection{Antenne}
 
-\section{Erweiterungen}
+Das winzige Kästchen ist ein Bluetooth- und WLAN-Modul für Funkverbindungen zum Handy und zum Heimnetz.
 
-% Siehe http://t3n.de/news/raspberry-pi-10-erweiterungen-519068/
+\subsection{RJ45-Buchse}
+
+Hier kann man ein LAN-Kabel anschließen, um den \textbf{Pi} mit dem lokalen Netzwerk zu verbinden. Ein LAN (\textit{Local Area Network}) ist ein Netzwerk aus Computern, die über Kabel miteinander verbunden sind. Praktischer ist allerdings ein Funknetz.
+
+\subsection{Aktivitäts-LED}
+
+Die LEDs informiert über den aktuellen Status des \textbf{Pi}. Sie haben folgende Bedeutung:
+\begin{itemize}
+\item Das grüne, ACT beschriftete Licht blinkt, wenn der \textbf{Pi} auf die SD Karte zugreift.
+\item Das rote, PWR markierte Licht leuchtet immer, wenn der \textbf{Pi} über genug Strom verfügt.
+\end{itemize}
+
+\subsection{Prozessor (SoC)}
+
+Das ist der Prozessor, das wichtigste Teil eines Computers. Hier werden Daten verarbeitet. Er besteht hauptsächlich aus vielen elektronischen Schaltern, die ständig geöffnet und geschlossen werden und so elektrische Signale über bestimmte Bahnen leiten. In dem \textbf{Pi} ist ein ARM-Prozessor mit einer Taktfrequenz von 1.2GHz. Das bedeutet im Prinzip, dass er in einer Sekunde 1200 Millionen Schaltvorgänge schafft. ARM steht für \textit{Advanced RISC Machines}, auf Deutsch \textit{fortgeschrittene RISC-Maschinen}. RISC wiederum hat nichts mit \textit{Risiko} zu tun, sondern ist eine Abkürzung für \textit{Reduced Instruction Set Computer}, also Computer mit reduziertem Befehlssatz. Das besondere Merkmal von ARM-Prozessoren ist, dass sie wenig Strom verbrauchen. Deswegen findet man sie auch in Mobiltelefonen. Noch etwas: Der Prozessor im Modell 3 hat vier Kerne. Das heisst, es sind eigentlich vier Prozessoren, die zusammen arbeiten.  
 
 \clearpage
 \appendix
@@ -169,7 +188,7 @@ Das \textbf{CSI} erlaubt die direkte Anbindung einer Kamera. Das \textit{Camera 
 \def\@seccntformat#1{Anhang~\csname the#1\endcsname:\quad}
 \makeatother
 
-\section{Anschlüsse und Komponenten}
+\section{Anschlüße und Komponenten}
 \label{apx:comp}
 
 \begin{figure}[h]
