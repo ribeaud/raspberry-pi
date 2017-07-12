@@ -159,7 +159,7 @@ Das \textbf{CSI} erlaubt die direkte Anbindung einer Kamera. Das \textit{Camera 
 \centering
 \includegraphics[scale=.8]{csi}
 \caption{Camera Serial Interface}
-\label{fig:gpio}
+\label{fig:csi}
 \end{figure}
 
 \subsection{Antenne}
@@ -181,6 +181,46 @@ Die LEDs informiert über den aktuellen Status des \textbf{Pi}. Sie haben folgen
 \subsection{Prozessor (SoC)}
 
 Das ist der Prozessor, das wichtigste Teil eines Computers. Hier werden Daten verarbeitet. Er besteht hauptsächlich aus vielen elektronischen Schaltern, die ständig geöffnet und geschlossen werden und so elektrische Signale über bestimmte Bahnen leiten. In dem \textbf{Pi} ist ein ARM-Prozessor mit einer Taktfrequenz von 1.2GHz. Das bedeutet im Prinzip, dass er in einer Sekunde 1200 Millionen Schaltvorgänge schafft. ARM steht für \textit{Advanced RISC Machines}, auf Deutsch \textit{fortgeschrittene RISC-Maschinen}. RISC wiederum hat nichts mit \textit{Risiko} zu tun, sondern ist eine Abkürzung für \textit{Reduced Instruction Set Computer}, also Computer mit reduziertem Befehlssatz. Das besondere Merkmal von ARM-Prozessoren ist, dass sie wenig Strom verbrauchen. Deswegen findet man sie auch in Mobiltelefonen. Noch etwas: Der Prozessor im Modell 3 hat vier Kerne. Das heisst, es sind eigentlich vier Prozessoren, die zusammen arbeiten.  
+
+\section{Anwendungen}
+
+\subsection{Der \rp als Mediacenter}
+
+Viele ältere oder billige Fernseher besitzen weder einen Internetzugang noch einen USB-Anschluss für Festplatten oder andere Speichergeräte. Ein passend konfigurierter Raspberry Pi rüstet beides preisgünstig nach und bietet zusätzliche Komfort-Funktionen.
+
+Man kann den \rp komplett als Mediacenter einrichten. Ein Mediacenter dieent der Wiedergabe von Medien. Man kann gemütlich auf dem Sofa und sieht sich Fotos und Videos an, hört Musik oder empfängt über das Internet Fernseh- und Radioprogramme.
+
+Das Mediacenter ist nicht für die produktive Arbeit mit dem Computer gedacht. Also: Textverarbeitung, Grafik und Programmieren fallen aus. Man braucht auch keine Tastatur. Eine Maus oder eine Fernbedienung reicht aus.
+
+Um den \rp in ein Mediacenter zu verwandeln, installiert man ein ganz anderes Betriebssystem. Man verwendet OSMC (Open Source Media Center), eine Weiterentwicklung von Kodi. Man kann sich auch ein sogenanntes Media-Set besorgen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.8]{kodi}
+\caption{\rp als Kodi/XBMC-Mediaplayer}
+\label{fig:kodi}
+\end{figure}
+
+\subsection{Papp-Lautsprecher mit Google Assistant}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3]{aiy}
+\caption{Raspberry Pi jetzt mit Google Assistant kompatibel}
+\label{fig:aiy}
+\end{figure}
+
+\textbf{Google} hat zuletzt eine Schnittstelle bereitgestellt, damit Entwickler auf Funktionen des \textit{Google Assistant (GA)} zugreifen können. Darüber hinaus war der Sprachassistent jedoch bis vor kurzem nur den \textit{Pixel}-Smartphones des Herstellers vorbehalten. Doch das ändert sich nun. Dank der Kooperation mit den Machern des \rp, der gleichnamigen Stiftung, gibt es nun die Möglichkeit, den \textit{GA} auch mit dem \textbf{Pi} zu nutzen.
+
+Tatsächlich gibt es in der englischsprachigen Ausgabe des offiziellen Raspberry-Pi-Magazins, die bereits ausverkauft ist, sogar einen Bausatz, um aus dem \textbf{Pi} einen Google-Home-Ersatz zu machen, samt Lautsprecher, Mikrofon, Papp-Box, Kabeln und einer Schritt-für-Schritt-Anleitung, sowie natürlich der notwendigen Software. Sie sind dann in der Lage, das Gerät ähnlich wie Amazons Alexa als Lautsprecher zu nutzen, der Ihnen über alles Mögliche Auskunft geben kann. Oder aber Sie nutzen die Schnittstelle zur Spracherkennung darüber hinaus noch weiter und programmieren eigene Befehle. Stellen Sie sich vor, dass Sie darüber einen fahrbaren oder zumindest beweglichen Roboter auch per Sprachbefehl steuern.
+
+Was alles in dem Paket enthalten ist, wird im nachfolgenden \href{https://www.youtube.com/watch?v=7WtSdWSv7uo}{Video} (engl.) erklärt.
+
+\subsection{Mit dem \rp die Wohnung überwachen}
+
+Überwachungskameras aus dem Einzelhandel kosten oft viel Geld, bieten wenig Funktionen oder erweisen sich im Einsatz als unflexibel. Mithilfe des \rp umgeht man alle diese Nachteile und erweitern bei Bedarf das System unkompliziert um weitere Features. Man braucht nur noch eine Kamera und die Software \textbf{Motion}.
+
+Eine ausführliche Anleitung findet man zum Beispiel \href{ttps://www.pcwelt.de/1925151/}{hier}.
 
 \clearpage
 \appendix
