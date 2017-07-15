@@ -42,6 +42,7 @@ linkcolor=black]{hyperref}
 \maketitle
 
 \tableofcontents
+\clearpage
 
 \section{Projekt 1: Formel 1}
 \label{sec:formel1}
@@ -108,5 +109,9 @@ Die beiden anderen Skripte werden immer ausgeführt, und zwar immer dann, wenn e
 \end{enumerate}
 
 \subsubsection{Gas geben und bremsen}
+
+Wenn du in deinem Rennwagen Gas gibst, wird die Geschwindigkeit höher. Wenn du bremst, wird sie niedriger. Das heisst: Die Schrittlänge ändert sich. Das Problem ist also, die Zahl in dem \textit{Gehe}-Baustein. Wenn die Geschwindigkeit geändert werden kann, darf hier überhaupt keine feste Zahl stehen.
+
+Was tun? Die Lösung ist eine \textbf{Variable}. An Stelle einer Zahl setzen wir in das Zahlfenster eine Variable, z.B. \includegraphics[height=\ht\strutbox]{speed.png} (engl. \textit{speed}=Geschwindigkeit).
 
 \end{document}
