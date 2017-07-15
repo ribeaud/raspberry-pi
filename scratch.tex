@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+
+\setlength{\parskip}{\baselineskip} % Increase space between paragraphs
+\setlength{\parindent}{0pt} % No indentation at paragraph level
+\renewcommand{\familydefault}{cmss}
+
+\usepackage[ngerman]{babel} % This is needed for umlauts
+\usepackage[utf8]{inputenc} % This is needed for umlauts
+\usepackage[T1]{fontenc} % This is needed for correct output of umlauts in pdf
+\usepackage[pdftex,breaklinks,colorlinks,
+citecolor=blue,
+urlcolor=blue,
+linkcolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage[german]{cleveref} % Prepend \ref with corresponding label
+% Use smaller margins
+\usepackage[cm]{fullpage}
+\usepackage{titlepic}
+\usepackage{float}
+\usepackage{subfig}
+
+% 'graphicx' configuration
+\graphicspath{ {img/} }
+\DeclareGraphicsExtensions{.jpg}
+
+% Copy title, author to PDF metadata
+\makeatletter
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+}
+\makeatother
+
+\title{Scratch}
+\author{Hr. Walter, Hr. Ehret und Hr. Ribeaud}
+\titlepic{\includegraphics[scale=0.5]{scratch_logo.jpg}}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Projekt 1: Formel 1}
+\label{sec:formel1}
+
+Dieses Projekt ist ein Autosimulator. Die Bühne zeigt eine Rennstrecke, über die ein Auto fährt. Du steuerst das Auto mit den Pfeiltasten. Immer wenn du auf der rechten Pfeiltaste drückst, dreht es sich um ein Stückchen nach rechts. Wenn du auf der linken Pfeiltaste drückst, dreht es sich nach links. Das Auto fährt mit konstanter  Geschwindigkeit. Wenn es die Strasse verlässt, hält es an.
+
+\subsection{Die Rennstrecke}
+\label{sub:rennstrecke}
+
+Lege ein neues Projekt an und speichere es in deinem Projektordner z.B. unter dem Name \textit{auto} ab. Als erstes zeichnest du die Rennstrecke.
+
+Klicke auf das Symbol der Bühne und wähle den Reiter \textit{Hintergründe}. Klicke dann auf die Schaltfläche \textit{Bearbeiten}.
+
+\begin{figure}[H]
+\centering
+\subfloat{\includegraphics[width=.45\linewidth]{rennbahn1.png}}
+\qquad
+\subfloat{\includegraphics[width=.45\linewidth]{rennbahn2.png}}
+\caption{Rennbahn als Bühnenbild}
+\label{fig:rennbahn}
+\end{figure}
+
+\subsection{Das Auto}
+\label{sub:auto}
+
+Jedes neue Scratch-Projekt enthält bereits ein Objekt - die Katze. Aber jetzt brauchst du keine Katze, du brauchst ein Auto.
+
+Das Malprogramm, um ein neues Sprite zu zeichnen, kann sich auf eine der folgenden Weisen öffnen:
+
+\begin{itemize}
+\item Doppelklicken auf der Katze, dann Schaltfläche \textit{Malen} neben \textit{Neues Kostüm:} anklicken.
+\item Klicke dann auf die Schaltfläche \textit{Neues Objekt Malen} \includegraphics[height=\ht\strutbox]{neues_objekt.png}
+\end{itemize}
+
+Halte die Form klar und einfach. Denn das Auto wird auf dem Bildschirm nur zu sehen sein. Vergiss nicht, dem neuen Objekt einen sinnvollen Namen zu geben, z.B. \textbf{Auto}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3]{auto.png}
+\caption{Ein Auto. Du kannst auch ein realisticheres Bild eines Formel-1-Wagens von oben zeichnen. Tipp: Zeichne zuerst ein rotes Rechteck und entferne dann mit dem Radiergummi kleinere Stücke.}
+\label{fig:auto}
+\end{figure}
+
+\subsection{Die Skripte}
+\label{sub:skripte}
+
+\subsection{Erweiterungen}
+
+\subsubsection{Klang, wenn man die Strasse verlässt}
+
+\subsubsection{Weiterfahren, wenn das Auto hält}
+
+\subsubsection{Anzeige einer Stoppuhr}
+
+\subsubsection{Gas geben und bremsen}
+
+\subsubsection{Punktezahlanzeige}
+
+\end{document}
