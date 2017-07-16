@@ -18,6 +18,7 @@ linkcolor=blue]{hyperref}
 \usepackage{titlepic}
 \usepackage{float}
 \usepackage{subfig}
+\usepackage{wrapfig}
 \usepackage[german]{cleveref} % Prepend \ref with corresponding label
 
 % 'graphicx' configuration
@@ -126,7 +127,52 @@ Erweitere das Projekt auf folgende Weise. Die Rennstrecke erstreckt sich über \
 \label{fig:erweiterung}
 \end{figure}
 
-\section{Projekt 2:}
+\section{Projekt 2: Ein gespielter Witz}
 \label{sec:projekt2}
+
+In diesem Projekt geht es um Animationen mit mehreren Figuren. Du entwickelst einen Dialog zwischen zwei Figuren.
+
+\cref{fig:comic} zeigt, was passiert. Da kommt ein Hund auf die Bühne und sagt etwas. Dabei öffnet uns schliesst sich der Mund. Der zweite Hund antwortet. Es ergibt sich ein Gespräch mit einem Lacher am Ende.
+
+\begin{figure}[H]
+\centering
+\includegraphics{comic.jpg}
+\caption{Ein animiertes Gespräch zwischen zwei Comicfiguren}
+\label{fig:comic}
+\end{figure}
+
+Was ist die Besonderheit einer solchen Animation? Wir haben hier zwei Objekte, die aufeinander reagieren. Niemand fällt dem anderen ins Wort. Jeder wartet, bis er an der Reihe ist. Die Antwort kommt zur richtigen Zeit - nämlich erst dann, wenn eine Frage gestellt worden ist. Das nennt man Synchronisation.
+
+\subsection{Eine Comicfigur zeichnen}
+
+Natürlich kannst du eine Figur mit dem Malprogramm selbst zeichnen. Aber es ist auch interessant, eine bereits fertige Zeichnung zu übernehmen und abzuwandeln.
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \vspace{-29pt}
+  \begin{center}
+    \includegraphics[scale=0.6]{importieren.png}
+  \end{center}
+  \vspace{-15pt}
+\end{wrapfigure}
+
+Auf dem Raspberry Pi findest du schon ein Angebot von Figuren. Wenn dir hier nichts gefällt, suche im Internet nach schönen Bildern. Anschliessend kannst du in Scratch ein neues Objekt erzeugen, das das gefundene Bild als Kostüm trägt. 
+
+Das neue Objekt erscheint sofort auf der Bühne. Es hat ein Kostüm, das du nun abwandelst. Gib dem Objekt einen Namen.
+
+Klicke auf den Reiter \textit{Kostüme}. Dann ist die Registierkarte mit den Kostümen sichtbar. Klicke dann auf \textit{Bearbeiten}. Dann öffnet sich das Malprogramm und du kannst das Bild ändern.
+
+Das Bild ist bestimmt viel zu gross. Klick auf Schrumpfen um es zu verkleinern. Als nächstes musst du die Umrisse deines Objektes ausschneiden. Für den kleineren Hund (\textbf{Max}) brauchst du mindestens zwei Kostüme, eins mit geschlossenem und eines mit geöffneten Mund. Kopiere das erste Kostüm und bearbeite es.
+
+Tina, der zweite Hund, schaut in eine andere Richtung als Max. Deshalb wirst du im ersten Schritt das Bild von Max spiegeln.
+
+Färbe das Kostüm anders ein und mach es ein bisschen grö"ser. Dann machst du zwei Kopien, so dass du insgesamt drei Kostüme für das Objekt \textbf{Tina} hast. Denke daran, den Kostümen sinnvolle Namen zu geben, z.B. \textit{Mund auf}, \textit{Mund zu}, \textit{Lachen}.
+
+In den Skripten verwendest du diese Namen. Da sollte man schon am Namen erkennen, welches Kostüm gemeint ist.
+
+\subsection{Die Skripte}
+
+\subsubsection{Synchronisation durch Warten}
+
+\subsubsection{Synchronisation durch Nachrichten}
 
 \end{document}
