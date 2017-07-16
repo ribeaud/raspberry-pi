@@ -10,7 +10,7 @@
 \usepackage[pdftex,breaklinks,colorlinks,
 citecolor=blue,
 urlcolor=blue,
-linkcolor=black]{hyperref}
+linkcolor=blue]{hyperref}
 \usepackage{graphicx}
 \usepackage[german]{cleveref} % Prepend \ref with corresponding label
 % Use smaller margins
@@ -18,6 +18,7 @@ linkcolor=black]{hyperref}
 \usepackage{titlepic}
 \usepackage{float}
 \usepackage{subfig}
+\usepackage[german]{cleveref} % Prepend \ref with corresponding label
 
 % 'graphicx' configuration
 \graphicspath{ {img/} }
@@ -45,7 +46,7 @@ linkcolor=black]{hyperref}
 \clearpage
 
 \section{Projekt 1: Formel 1}
-\label{sec:formel1}
+\label{sec:projekt1}
 
 Dieses Projekt ist ein Autosimulator. Die Bühne zeigt eine Rennstrecke, über die ein Auto fährt. Du steuerst das Auto mit den Pfeiltasten. Immer wenn du auf der rechten Pfeiltaste drückst, dreht es sich um ein Stückchen nach rechts. Wenn du auf der linken Pfeiltaste drückst, dreht es sich nach links. Das Auto fährt mit konstanter  Geschwindigkeit. Wenn es die Strasse verlässt, hält es an.
 
@@ -113,5 +114,19 @@ Die beiden anderen Skripte werden immer ausgeführt, und zwar immer dann, wenn e
 Wenn du in deinem Rennwagen Gas gibst, wird die Geschwindigkeit höher. Wenn du bremst, wird sie niedriger. Das heisst: Die Schrittlänge ändert sich. Das Problem ist also, die Zahl in dem \textit{Gehe}-Baustein. Wenn die Geschwindigkeit geändert werden kann, darf hier überhaupt keine feste Zahl stehen.
 
 Was tun? Die Lösung ist eine \textbf{Variable}. An Stelle einer Zahl setzen wir in das Zahlfenster eine Variable, z.B. \includegraphics[height=\ht\strutbox]{speed.png} (engl. \textit{speed}=Geschwindigkeit).
+
+\subsubsection{Autorennen mit mehreren Szenen}
+
+Erweitere das Projekt auf folgende Weise. Die Rennstrecke erstreckt sich über \textit{zwei} Hintergrundbilder wie in \cref{fig:erweiterung} Wenn der Rennwagen den rechten Rand des ersten Bildes berührt, erscheint ein neues Hintergrundbild mit dem zweiten Teil der Rennstrecke. Der Wagen springt an den linken Rand der Bühne und fährt von links über das Bild weiter. Anders herum funktioniert es genauso: Wenn der Wagen sich im rechten Teil der Rennstrecke befindet und gegen den linken Rand fährt, ändert sich wieder das Hintergrundbild.
+
+\begin{figure}[H]
+\centering
+\includegraphics{rennbahn3.jpg}
+\caption{Eine Rennstrecke, die sich über zwei Hintergrundbilder erstreckt.}
+\label{fig:erweiterung}
+\end{figure}
+
+\section{Projekt 2:}
+\label{sec:projekt2}
 
 \end{document}
