@@ -20,6 +20,7 @@ linkcolor=blue]{hyperref}
 \usepackage[cm]{fullpage}
 \usepackage{layout}
 \usepackage{float}
+\usepackage{subfig}
 \usepackage{wrapfig}
 \usepackage{textcomp}
 \usepackage{eurosym}
@@ -40,7 +41,7 @@ linkcolor=blue]{hyperref}
 
 \begin{document}
 % '\layout' to visualize the layout applied
-\title{Raspberry Pi}
+\title{Raspberry Pi \cite{book}}
 \author{Hr. Walter, Hr. Ehret und Hr. Ribeaud}
 \maketitle
 
@@ -202,11 +203,13 @@ Um den \rp in ein Mediacenter zu verwandeln, installiert man ein ganz anderes Be
 \label{fig:kodi}
 \end{figure}
 
-\subsection{Papp-Lautsprecher mit Google Assistant}
+\subsection{Papp-Lautsprecher mit Google Assistant (aka Amazon Echo - "Hallo Alexa?")}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.3]{aiy}
+\subfloat{\includegraphics[width=.45\linewidth]{google_raspi_kit}}
+\qquad
+\subfloat{\includegraphics[width=.45\linewidth]{aiy}}
 \caption{Raspberry Pi jetzt mit Google Assistant kompatibel}
 \label{fig:aiy}
 \end{figure}
@@ -221,7 +224,7 @@ Was alles in dem Paket enthalten ist, wird im nachfolgenden \href{https://www.yo
 
 Überwachungskameras aus dem Einzelhandel kosten oft viel Geld, bieten wenig Funktionen oder erweisen sich im Einsatz als unflexibel. Mithilfe des \rp umgeht man alle diese Nachteile und erweitern bei Bedarf das System unkompliziert um weitere Features. Man braucht nur noch eine Kamera und die Software \textbf{Motion}.
 
-Eine ausführliche Anleitung findet man zum Beispiel \href{ttps://www.pcwelt.de/1925151/}{hier}.
+Eine ausführliche Anleitung findet man zum Beispiel \href{https://www.pcwelt.de/1925151/}{hier}.
 
 \clearpage
 \appendix
@@ -238,5 +241,9 @@ Eine ausführliche Anleitung findet man zum Beispiel \href{ttps://www.pcwelt.de/
 \caption{Raspberry Pi 3}
 \label{fig:rp_ls}
 \end{figure}
+
+\begin{thebibliography}{1}
+\bibitem{book} Michael Weigend, {\em Raspberry Pi für Kids}, 2. Auflage, 2016.
+\end{thebibliography}
 
 \end{document}
